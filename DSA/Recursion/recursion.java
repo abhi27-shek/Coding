@@ -36,13 +36,31 @@ public class recursion {
     return n * fact(n-1);
     }
 
+    public static int natural(int n){
+        if(n == 1){
+            return 1;
+        }
+        return n + natural(n-1);
+    }
+    public static int fib(int n){
+        if(n == 0 ){
+            return 0;
+        }
+        if(n == 1){
+            return 1;
+        }
+        return fib(n-1) + fib(n-2);
+    }
+
+
     public static void main(String args[]){
-        int n = 5;
+        int n = 6;
         //int i = 1;
         //printDec(n);
         //printInc(n);
         //table(n, i);
-        fact(9);
-        System.out.print(fact(n));
+        //System.out.print(fact(n));
+        //System.out.print(natural(n));
+        System.out.print(fib(n));
     }
 }
