@@ -1,8 +1,9 @@
+package DSA.pattern;
 public class pattern {
 
     public static void hollow_rectangle(int totRows, int totCols){
         //outer loop
-        for(int i=1; i<=totRows; i++){
+      for(int i=1; i<=totRows; i++){
             //inner - columns
             for(int j=1; j<=totCols; j++){
                 //cell - (i,j)
@@ -16,7 +17,7 @@ public class pattern {
             System.out.println();
         }
     }
-
+//------------------------------------------------------------------
     public static void inverted_rotated_pyramid(int n){
         //outer
         for(int i=1; i<=n; i++){
@@ -33,7 +34,7 @@ public class pattern {
             System.out.println();
         }
     }
-
+//------------------------------------------------------------------
     public static void floyds_triangle(int n){
         //outer
         int counter = 1;
