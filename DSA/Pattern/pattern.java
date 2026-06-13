@@ -1,4 +1,4 @@
-package DSA.pattern;
+package DSA.Pattern;
 public class pattern {
 
     public static void hollow_rectangle(int totRows, int totCols){
