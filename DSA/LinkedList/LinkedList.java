@@ -1,7 +1,9 @@
 package DSA.LinkedList;
 
-    //Create ll
+    
     public class LinkedList {
+//------------------------------------------------------------------
+    //Create ll
     public static class Node{
         int data;
         Node next;
@@ -196,6 +198,18 @@ package DSA.LinkedList;
         }
         prev.next = prev.next.next;
         return;
+    }
+//------------------------------------------------------------------
+    //Check if ll is palindrome
+    public Node findMid(Node head){
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next; //+1
+            fast = fast.next.next;//21
+        }
+        return slow; //slow is my midNode
     }
 
 
