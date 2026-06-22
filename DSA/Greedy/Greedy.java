@@ -3,22 +3,54 @@ import java.util.*;
 
 public class Greedy {
     public static void main(String[] args) {
-        int A[] = {1, 2, 3};
-        int B[] = {2,1,3};
+        Integer coins[] = {1, 2, 5, 10, 20, 50, 100, 500, 2000};
 
-        Arrays.sort(A);
-        Arrays.sort(B);
+        Arrays.sort(coins, Comparator.reverseOrder());
 
-        int minDiff = 0;
+        int countOfCoins=0;
+        int amount = 590;
+        ArrayList<Integer> ans= new ArrayList<>();
 
-        for(int i=0; i<A.length; i++){
-            minDiff += Math.abs(A[i]-B[i]);
+        for(int i=0; i<coins.length; i++){
+            if(coins[i] <= amount){
+                while(coins[i] <= amount){
+                    countOfCoins++;
+                    ans.add(coins[i]);
+                    amount -= coins[i];
+                }
+            }
         }
-
-        System.out.println(minDiff);
+        System.out.println(countOfCoins);
     }
 }
 
+// int pairs[][]={{5, 24}, {39, 60}, {5,28}, {27, 40}, {50, 90}};
+
+//         Arrays.sort(pairs, Comparator.comparingDouble(o -> o[1]));
+        
+//         int chainLen = 1;
+//         int chainEnd = pairs[0][1]; //Last selected pairs end //chain end
+
+//         for(int i=1; i<pairs.length; i++){
+//             if(pairs[i][0] > chainEnd){
+//                 chainLen++;
+//                 chainEnd = pairs[i][1];
+//             }
+//         }
+//         System.out.println("max length of chain = " + chainLen);
+// int A[] = {1, 2, 3};
+//         int B[] = {2,1,3};
+
+//         Arrays.sort(A);
+//         Arrays.sort(B);
+
+//         int minDiff = 0;
+
+//         for(int i=0; i<A.length; i++){
+//             minDiff += Math.abs(A[i]-B[i]);
+//         }
+
+//         System.out.println(minDiff);
 
 // int start[] = {1, 3, 0, 5, 8, 5};
 //         int end[] = {2, 4, 6, 7, 9, 9};
