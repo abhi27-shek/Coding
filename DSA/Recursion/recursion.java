@@ -51,7 +51,7 @@ public class recursion {
         }
         return fib(n-1) + fib(n-2);
     }
-
+    
 
     public static void main(String args[]){
         int n = 6;
@@ -61,6 +61,6 @@ public class recursion {
         //table(n, i);
         //System.out.print(fact(n));
         //System.out.print(natural(n));
-        System.out.print(fib(n));
+        //System.out.print(fib(n));
     }
 }
